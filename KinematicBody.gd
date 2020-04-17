@@ -1,5 +1,5 @@
 extends KinematicBody
-const SPEED = 6
+const SPEED = 10
 var velocity = Vector3(0,0,0)  
 
 func _ready():
@@ -24,4 +24,6 @@ func _physics_process(delta):
 			velocity.z = SPEED
 	else:
 		velocity.z = lerp(velocity.z,0,0.1)
+		
+		
 	move_and_slide(velocity)
