@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://KinematicBody.gd" type="Script" id=1]
 [ext_resource path="res://Area.gd" type="Script" id=2]
@@ -24,14 +24,12 @@ albedo_color = Color( 0.890196, 0.392157, 0.392157, 1 )
 [sub_resource type="SpatialMaterial" id=9]
 albedo_color = Color( 0.133333, 0.0392157, 0.431373, 1 )
 
+[sub_resource type="CylinderShape" id=13]
+
 [sub_resource type="CylinderMesh" id=10]
 
 [sub_resource type="SpatialMaterial" id=11]
 albedo_color = Color( 0.976471, 0.0705882, 0.0862745, 0.266667 )
-
-[sub_resource type="CylinderShape" id=12]
-
-[sub_resource type="CylinderShape" id=13]
 
 [node name="Level1" type="Spatial"]
 
@@ -112,21 +110,16 @@ transform = Transform( 50, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 mesh = SubResource( 8 )
 material/0 = SubResource( 9 )
 
-[node name="endpoint" type="StaticBody" parent="Node"]
-
-[node name="MeshInstance" type="MeshInstance" parent="Node/endpoint"]
+[node name="Area" type="Area" parent="Node"]
 transform = Transform( 1, 0, 0, 0, 50, 0, 0, 0, 1, 0, 0, 0 )
-mesh = SubResource( 10 )
-material/0 = SubResource( 11 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Node/endpoint"]
-transform = Transform( 1, 0, 0, 0, 50, 0, 0, 0, 1, 0, 0, 0 )
-shape = SubResource( 12 )
-
-[node name="Area" type="Area" parent="Node/endpoint"]
 script = ExtResource( 2 )
 
-[node name="CollisionShape" type="CollisionShape" parent="Node/endpoint/Area"]
-transform = Transform( 1, 0, 0, 0, 50, 0, 0, 0, 3, 0, 0, 0 )
+[node name="CollisionShape" type="CollisionShape" parent="Node/Area"]
+transform = Transform( 1, 0, 0, 0, 50, 0, 0, 0, 1, 0, 0, 0 )
 shape = SubResource( 13 )
-[connection signal="body_entered" from="Node/endpoint/Area" to="Node/endpoint/Area" method="_on_Area_body_entered"]
+
+[node name="MeshInstance" type="MeshInstance" parent="Node/Area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.333333, 0, 0, 0 )
+mesh = SubResource( 10 )
+material/0 = SubResource( 11 )
+[connection signal="body_entered" from="Node/Area" to="Node/Area" method="_on_Area_body_entered"]

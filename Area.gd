@@ -18,4 +18,4 @@ func _ready():
 
 func _on_Area_body_entered(body):
 	if body is KinematicBody:
-		get_tree().change_scene("res://Level1.tscn")
+		get_tree().change_scene("menu.tscn")
