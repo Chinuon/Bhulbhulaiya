@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://KinematicBody.gd" type="Script" id=1]
 
@@ -22,6 +22,13 @@ albedo_color = Color( 0.890196, 0.392157, 0.392157, 1 )
 
 [sub_resource type="SpatialMaterial" id=9]
 albedo_color = Color( 0.133333, 0.0392157, 0.431373, 1 )
+
+[sub_resource type="CylinderMesh" id=10]
+
+[sub_resource type="SpatialMaterial" id=11]
+albedo_color = Color( 0.976471, 0.0705882, 0.0862745, 0.266667 )
+
+[sub_resource type="CylinderShape" id=12]
 
 [node name="Level1" type="Spatial"]
 
@@ -102,4 +109,13 @@ transform = Transform( 50, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 mesh = SubResource( 8 )
 material/0 = SubResource( 9 )
 
-[node name="wall2" type="StaticBody" parent="Node"]
+[node name="innerwall" type="StaticBody" parent="Node"]
+
+[node name="MeshInstance" type="MeshInstance" parent="Node/innerwall"]
+transform = Transform( 1, 0, 0, 0, 50, 0, 0, 0, 1, 0, 0, 0 )
+mesh = SubResource( 10 )
+material/0 = SubResource( 11 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Node/innerwall"]
+transform = Transform( 1, 0, 0, 0, 50, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 12 )
