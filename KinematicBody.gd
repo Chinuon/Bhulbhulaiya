@@ -28,8 +28,8 @@ func _physics_process(delta):
 		velocity.z = lerp(velocity.z,0,0.1)
 		
 	if velocity.y > 0:
-		gravity = -20
+		gravity = -3
 	else:
-		gravity = -30
-		velocity.y += gravity * delta
+		gravity = -3
+		velocity.y += gravity 
 	move_and_slide(velocity, Vector3(0, 1, 0))
