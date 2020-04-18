@@ -96,6 +96,24 @@ shape = SubResource( 6 )
 transform = Transform( 0.916707, 0.0968124, -0.387654, 0.0132408, 0.962309, 0.271637, 0.399341, -0.254145, 0.880873, -1.86619, 2.56944, 6.62615 )
 fov = 114.297
 
+[node name="Label" type="Label" parent="KinematicBody/Camera"]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0.0862745, 0.0196078, 0.0196078, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="KinematicBody/Camera"]
+margin_left = 39.0
+margin_right = 97.0
+margin_bottom = 20.0
+custom_colors/font_color = Color( 0.0156863, 0.0117647, 0.0117647, 1 )
+text = "Sec left"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="walls" type="Node" parent="."]
 
 [node name="walls" type="StaticBody" parent="walls"]

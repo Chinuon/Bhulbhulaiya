@@ -3,12 +3,22 @@ const SPEED = 10
 var velocity = Vector3(0,0,0)  
 var gravity = -20
 var direction = Vector3()
+var backtimer = 180
+var milisec = 60
 
 func _ready():
-	pass 
+	set_physics_process(true)
+	set_process(true)
 	
+func _process(delta):
+	var labelnode = get_parent().get_node("KinematicBody/Camera/Label")
+	labelnode.text = str(backtimer)
+	milisec -= 1
+	if milisec == 0:
+		backtimer -= 1
+		milisec = 60
+
 func _physics_process(delta):
-	
 	if Input.is_action_pressed("ui_right") and Input.is_action_pressed("ui_left"):
 		velocity.x = 0
 	elif Input.is_action_pressed("ui_right"):
@@ -34,7 +44,5 @@ func _physics_process(delta):
 		velocity.y += gravity 
 	move_and_slide(velocity, Vector3(0, 1, 0))
 
-
 func _on_Timer_timeout():
 	get_tree().change_scene("res://menu.tscn")
-	pass # Replace with function body.

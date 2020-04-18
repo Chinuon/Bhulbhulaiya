@@ -64,14 +64,14 @@ texture = ExtResource( 1 )
 position = Vector2( 550.026, 143.645 )
 frames = SubResource( 1 )
 animation = "logo"
-frame = 3
+frame = 2
 playing = true
 
 [node name="start" type="AnimatedSprite" parent="."]
 position = Vector2( 537.749, 308.162 )
 frames = SubResource( 2 )
 animation = "start"
-frame = 5
+frame = 4
 playing = true
 
 [node name="start" type="Button" parent="start"]
@@ -87,7 +87,7 @@ __meta__ = {
 [node name="quit" type="AnimatedSprite" parent="."]
 position = Vector2( 540.205, 401.47 )
 frames = SubResource( 3 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="quit" type="Button" parent="quit"]
