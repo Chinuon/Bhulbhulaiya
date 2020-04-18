@@ -33,3 +33,8 @@ func _physics_process(delta):
 		gravity = -3
 		velocity.y += gravity 
 	move_and_slide(velocity, Vector3(0, 1, 0))
+
+
+func _on_Timer_timeout():
+	get_tree().change_scene("res://menu.tscn")
+	pass # Replace with function body.

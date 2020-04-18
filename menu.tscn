@@ -64,7 +64,7 @@ texture = ExtResource( 1 )
 position = Vector2( 550.026, 143.645 )
 frames = SubResource( 1 )
 animation = "logo"
-frame = 4
+frame = 3
 playing = true
 
 [node name="start" type="AnimatedSprite" parent="."]
@@ -124,6 +124,17 @@ margin_right = 673.513
 margin_bottom = 426.737
 custom_colors/default_color = Color( 0.027451, 0.0235294, 0.0235294, 1 )
 text = "Down Key"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 409.0
+margin_top = 218.0
+margin_right = 687.0
+margin_bottom = 232.0
+custom_colors/font_color = Color( 0.137255, 0.027451, 0.027451, 1 )
+text = "Reach to the Red Tower ASAP(Within 3 min)"
 __meta__ = {
 "_edit_use_anchors_": false
 }
