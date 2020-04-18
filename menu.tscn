@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://image/splash.jpg" type="Texture" id=1]
 [ext_resource path="res://titlename/0001.png" type="Texture" id=2]
@@ -8,12 +8,40 @@
 [ext_resource path="res://titlename/0003.png" type="Texture" id=6]
 [ext_resource path="res://titlename/0002.png" type="Texture" id=7]
 [ext_resource path="res://menu.gd" type="Script" id=8]
+[ext_resource path="res://quitlogo/0005.png" type="Texture" id=9]
+[ext_resource path="res://quitlogo/0001.png" type="Texture" id=10]
+[ext_resource path="res://starticon/0001.png" type="Texture" id=11]
+[ext_resource path="res://quitlogo/0004.png" type="Texture" id=12]
+[ext_resource path="res://quitlogo/0006.png" type="Texture" id=13]
+[ext_resource path="res://starticon/0004.png" type="Texture" id=14]
+[ext_resource path="res://quitlogo/0002.png" type="Texture" id=15]
+[ext_resource path="res://starticon/0002.png" type="Texture" id=16]
+[ext_resource path="res://starticon/0003.png" type="Texture" id=17]
+[ext_resource path="res://starticon/0006.png" type="Texture" id=18]
+[ext_resource path="res://starticon/0005.png" type="Texture" id=19]
+[ext_resource path="res://quitlogo/0003.png" type="Texture" id=20]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "logo",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 11 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 14 ), ExtResource( 19 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "start",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 10 ), ExtResource( 15 ), ExtResource( 20 ), ExtResource( 12 ), ExtResource( 9 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "default",
 "speed": 5.0
 } ]
 
@@ -29,5 +57,40 @@ texture = ExtResource( 1 )
 position = Vector2( 550.026, 143.645 )
 frames = SubResource( 1 )
 animation = "logo"
-frame = 1
+frame = 3
 playing = true
+
+[node name="start" type="AnimatedSprite" parent="."]
+position = Vector2( 537.749, 308.162 )
+frames = SubResource( 2 )
+animation = "start"
+frame = 5
+playing = true
+
+[node name="start" type="Button" parent="start"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -75.0
+margin_top = -28.0
+margin_right = 78.0
+margin_bottom = 31.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="quit" type="AnimatedSprite" parent="."]
+position = Vector2( 540.205, 401.47 )
+frames = SubResource( 3 )
+frame = 3
+playing = true
+
+[node name="quit" type="Button" parent="quit"]
+modulate = Color( 1, 1, 1, 0.027451 )
+margin_left = -65.0
+margin_top = -28.0
+margin_right = 65.0
+margin_bottom = 29.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="start/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="quit/quit" to="." method="_on_quit_pressed"]

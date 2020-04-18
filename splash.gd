@@ -16,11 +16,5 @@ func _ready():
 #	pass
 
 
-func _on_start_pressed():
-	get_tree().change_scene("res://Level1.tscn")
-	pass # Replace with function body.
-
-
-func _on_quit_pressed():
-	get_tree().quit()
-	pass # Replace with function body.
+func _on_Timer_timeout():
+	get_tree().change_scene("menu.tscn")
