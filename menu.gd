@@ -10,11 +10,16 @@ extends Node2D
 func _ready():
 	pass # Replace with function body.
 
+func _physics_process(delta):
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
+	if Input.is_action_just_pressed("ui_up"):
+		_on_start_pressed()
+	if Input.is_action_just_pressed("ui_down"):
+		_on_quit_pressed()
 
 func _on_start_pressed():
 	get_tree().change_scene("res://Level1.tscn")
@@ -24,3 +29,7 @@ func _on_start_pressed():
 func _on_quit_pressed():
 	get_tree().quit()
 	pass # Replace with function body.
+	
+
+	
+
