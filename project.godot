@@ -19,6 +19,10 @@ config/name="Bhulbhulaiya"
 run/main_scene="res://splash.tscn"
 config/icon="res://logo/icon.png"
 
+[display]
+
+window/handheld/orientation="sensor_landscape"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
