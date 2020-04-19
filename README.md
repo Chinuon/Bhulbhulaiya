@@ -10,3 +10,9 @@
 
 Bhulbhulaiya is a multi platform semi-3d game made for Mini Jam 52: Summit.
 You have to get out of the maze in the limited time period. The difficulty of the game will increase with rise in level.
+
+screenshot - 
+
+<img src="https://github.com/Chaitanyassr/Bhulbhulaiya/blob/master/screenshot/Screenshot%20(250).png" >
+<img src="https://github.com/Chaitanyassr/Bhulbhulaiya/blob/master/screenshot/Screenshot%20(251).png" >
+
