@@ -555,7 +555,7 @@ transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 shape = SubResource( 25 )
 
 [node name="StaticBody34" type="StaticBody" parent="walls"]
-transform = Transform( -0.745441, 0, -0.666571, 0, 1, 0, 0.666571, 0, -0.745441, 47.8158, 0, -14.2735 )
+transform = Transform( 0.221769, 0, -0.975099, 0, 1, 0, 0.975099, 0, 0.221769, 47.8158, 0, -14.2735 )
 
 [node name="MeshInstance" type="MeshInstance" parent="walls/StaticBody34"]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
@@ -567,10 +567,10 @@ transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 shape = SubResource( 25 )
 
 [node name="StaticBody35" type="StaticBody" parent="walls"]
-transform = Transform( 0.033652, 0.00606528, 0.999415, -0.146114, 0.989267, -0.0010838, -0.988695, -0.145992, 0.0341771, 45.4334, 0, -10.3963 )
+transform = Transform( 0.033652, 0.00606528, 0.999415, -0.0960617, 0.995371, -0.00280618, -0.994806, -0.0959111, 0.0340789, 10.2434, 0, -11.145 )
 
 [node name="MeshInstance" type="MeshInstance" parent="walls/StaticBody35"]
-transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform = Transform( 9.97351, -0.0727425, 0.000530645, 0.727436, 0.997348, -0.00243332, -0.00352293, 0.00246546, 0.999997, 0.48548, 0.274921, 0.140462 )
 mesh = SubResource( 23 )
 material/0 = SubResource( 24 )
 
