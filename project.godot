@@ -17,7 +17,7 @@ _global_script_class_icons={
 
 config/name="Bhulbhulaiya"
 run/main_scene="res://splash.tscn"
-config/icon="res://icon.png"
+config/icon="res://logo/icon.png"
 
 [rendering]
 
