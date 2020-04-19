@@ -1,6 +1,8 @@
 extends KinematicBody
 const SPEED = 10
 var velocity = Vector3(0,0,0)  
+var gravity = -20
+var direction = Vector3()
 
 func _ready():
 	pass 
@@ -25,5 +27,9 @@ func _physics_process(delta):
 	else:
 		velocity.z = lerp(velocity.z,0,0.1)
 		
-		
-	move_and_slide(velocity)
+	if velocity.y > 0:
+		gravity = -20
+	else:
+		gravity = -30
+		velocity.y += gravity * delta
+	move_and_slide(velocity, Vector3(0, 1, 0))
