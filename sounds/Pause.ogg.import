@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Pause.ogg-fef5f0222f9b9d826487aed4201a1bf1.oggstr"
+
+[deps]
+
+source_file="res://sounds/Pause.ogg"
+dest_files=[ "res://.import/Pause.ogg-fef5f0222f9b9d826487aed4201a1bf1.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
